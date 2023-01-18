@@ -61,6 +61,7 @@ const fontSizes = {
   '8xl': '96rem',
   '9xl': '128rem',
 };
+
 const lineHeights = {
   normal: 'normal',
   none: 1,
@@ -78,6 +79,7 @@ const lineHeights = {
   9: '36rem',
   10: '40rem',
 };
+
 const sizes = {
   ...remTable,
   '3xs': '224rem',
@@ -101,6 +103,7 @@ const sizes = {
     xl: '1280rem',
   },
 };
+
 const space = remTable;
 
 const defaultConfigs: ComponentDefaultProps = {

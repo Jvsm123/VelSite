@@ -1,0 +1,42 @@
+html {
+  font-size: 1px;
+  -webkit-text-size-adjust: none;
+}
+
+@media (min-width: 721px) and (max-width: 1439px) {
+  html {
+    font-size: 0.0696111111vw;
+  }
+}
+
+@media (max-width: 720px) {
+  html {
+    font-size: 0.27777777778vw;
+  }
+}
+
+@font-face {
+  font-family: "Greenth";
+  src: url("../assets/fonts/Greenth_Personal_Use.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Eczar";
+  src: url("../assets/fonts/Eczar-SemiBold.ttf") format("truetype"),
+    url("../assets/fonts/Eczar-Bold.ttf") format("truetype"),
+    url("../assets/fonts/Eczar-Medium.ttf") format("truetype"),
+    url("../assets/fonts/Eczar-Regular.ttf") format("truetype"),
+    url("../assets/fonts/Eczar-ExtraBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Raleway Heavy";
+  src: url("../assets/fonts/Raleway-ExtraBold.ttf") format("opentype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Telegraf";
+  src: url("../assets/fonts/PPTelegraf-Regular.otf") format("opentype");
+  font-weight: medium;
+}
