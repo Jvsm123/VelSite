@@ -2,19 +2,28 @@ import {
   Box,
   Button,
   Center,
+  Flex,
   Image,
   ListItem,
   Text,
   UnorderedList,
   useBreakpointValue,
   VStack,
+  Icon,
 } from "@chakra-ui/react";
+
+import { BsTelephoneOutbound } from "react-icons/bs";
 
 import logo from "../assets/logoVeu.png";
 import roadMap from "../assets/road.png";
 import iveco from "../assets/iveco.png";
 
 export default function Home() {
+  const isMobile = useBreakpointValue({
+    m: true,
+    d: false,
+  });
+
   return (
     <Center h="100vh">
       <VStack w={{ m: "100vw", d: "1440rem" }} h="100%">
@@ -32,7 +41,7 @@ export default function Home() {
           </Box>
 
           <VStack w="100%">
-            <Box>
+            <Box mt={{ m: "30rem !important", d: "inherit" }} mb="30rem">
               <Text fontSize="61rem" fontFamily="titulo">
                 VEU MUDANÇAS
               </Text>
@@ -49,33 +58,36 @@ export default function Home() {
             <Box
               display="flex"
               alignItems="center"
+              flexDir={{ m: "column", d: "row" }}
               w="100%"
               position="relative"
-              height="500rem"
+              height={{ m: "none", d: "500rem" }}
             >
               <Box
                 display="flex"
                 w="100%"
-                h="255rem"
+                h={{ m: "80rem", d: "255rem" }}
                 pos="absolute"
-                top="160rem"
+                top={{ m: "none", d: "160rem" }}
                 alignItems="center"
                 bgColor="#290603"
               ></Box>
 
-              <Box w="100%">
-                <Image
-                  pos="absolute"
-                  alt="Image RoadMap"
-                  top="98rem"
-                  zIndex="1"
-                  src={roadMap.src}
-                  w="485rem"
-                  h="315rem"
-                  objectFit="cover"
-                  objectPosition="5rem 80rem"
-                />
-              </Box>
+              {!isMobile && (
+                <Box w="100%">
+                  <Image
+                    pos="absolute"
+                    alt="Image RoadMap"
+                    top="98rem"
+                    zIndex="1"
+                    src={roadMap.src}
+                    w="485rem"
+                    h="315rem"
+                    objectFit="cover"
+                    objectPosition="5rem 80rem"
+                  />
+                </Box>
+              )}
 
               <Text
                 w="290rem"
@@ -83,21 +95,23 @@ export default function Home() {
                 fontFamily="cta"
                 fontWeight="bold"
                 zIndex="4"
-                pos="absolute"
-                left="325rem"
+                pos={{ m: "relative", d: "absolute" }}
+                left={{ m: "inherit", d: "325rem" }}
               >
                 DISPONÍVEL EM TODAS AS REGIÕES DO BRASIL
               </Text>
 
-              <Image
-                alt="Iveco Image"
-                position="absolute"
-                src={iveco.src}
-                w="935rem"
-                h="650rem"
-                left="520rem"
-                zIndex="1"
-              />
+              {!isMobile && (
+                <Image
+                  alt="Iveco Image"
+                  position="absolute"
+                  src={iveco.src}
+                  w="935rem"
+                  h="650rem"
+                  left="520rem"
+                  zIndex="1"
+                />
+              )}
             </Box>
           </VStack>
 
@@ -110,21 +124,32 @@ export default function Home() {
             display="flex"
             justifyContent="center"
             alignItems="center"
+            mt={{ m: "30rem !important", d: "inherit" }}
           >
             NOSSOS SERVIÇOS
           </Box>
 
           <Box
+            mt={{ m: "30rem !important", d: "inherit" }}
             w="100%"
             fontSize="18rem"
             bgColor="#091129"
             display="flex"
             alignItems="center"
-			justifyContent='flex-start'
+            justifyContent="flex-start"
+            flexDir={{ m: "column", d: "row" }}
           >
-            <Image alt="Iveco" src={iveco.src} transform="rotateY(186deg)" w='300rem' h='300rem'/>
+            {!isMobile && (
+              <Image
+                alt="Iveco"
+                src={iveco.src}
+                transform="rotateY(186deg)"
+                w="300rem"
+                h="300rem"
+              />
+            )}
 
-            <Box>
+            <Flex pl={{ m: "10rem", d: "inherit" }}>
               <UnorderedList>
                 <ListItem fontSize="24.7rem" fontFamily="cta">
                   MUDANÇAS E EVENTOS PARA TODO BRASIL
@@ -133,14 +158,14 @@ export default function Home() {
                   MONTAGEM E DESMONTAGEM DE MÓVEIS
                 </ListItem>
               </UnorderedList>
-            </Box>
+            </Flex>
           </Box>
 
           <VStack
-            w="450rem"
-            h="400rem"
+            w={{ m: "100%", d: "450rem" }}
+            h={{ m: "200rem", d: "400rem" }}
             bgColor="#141211"
-            mt="30rem !important"
+            mt={{ m: "30rem !important", d: "inherit" }}
             p="30rem"
             justifyContent="space-evenly"
           >
@@ -154,8 +179,8 @@ export default function Home() {
               FAÇA SEU ORÇAMENTO
             </Box>
 
-            <Box display="flex" alignItems="center">
-              <Image alt="Tel" />
+            <Box display="flex" alignItems="baseline" gap='5rem'>
+              <Icon as={BsTelephoneOutbound} h='10rem' w='10rem'/>
               <Text fontSize="15rem">19 0 0000-0000</Text>
             </Box>
 
