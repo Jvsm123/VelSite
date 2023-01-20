@@ -1,22 +1,21 @@
 import {
   Box,
-  Button,
   Center,
   Flex,
+  Icon,
   Image,
   ListItem,
   Text,
   UnorderedList,
   useBreakpointValue,
   VStack,
-  Icon,
 } from "@chakra-ui/react";
 
 import { BsTelephoneOutbound } from "react-icons/bs";
 
+import iveco from "../assets/iveco.png";
 import logo from "../assets/logoVeu.png";
 import roadMap from "../assets/road.png";
-import iveco from "../assets/iveco.png";
 
 export default function Home() {
   const isMobile = useBreakpointValue({
@@ -41,19 +40,26 @@ export default function Home() {
           </Box>
 
           <VStack w="100%">
-            <Box mt={{ m: "30rem !important", d: "inherit" }} mb="30rem">
-              <Text fontSize="61rem" fontFamily="titulo">
-                VEU MUDANÇAS
-              </Text>
-              <Text
-                fontSize="16.9rem"
-                bgColor="#244466"
-                p="4rem"
-                fontFamily="cta"
-              >
-                O MELHOR TRANSPORTE VOCÊ ENCONTRA AQUI
-              </Text>
-            </Box>
+            <VStack w="100%" alignItems="flex-start">
+              <Box mt={{ m: "30rem !important", d: "inherit" }}>
+                <Text
+                  fontSize={{ m: "45rem", d: "61rem" }}
+                  fontFamily="titulo"
+                  textAlign="center"
+                >
+                  VEU MUDANÇAS
+                </Text>
+                <Text
+                  fontSize="16.9rem"
+                  bgColor="#244466"
+                  p="4rem"
+                  fontFamily="cta"
+                  textAlign="center"
+                >
+                  O MELHOR TRANSPORTE VOCÊ ENCONTRA AQUI
+                </Text>
+              </Box>
+            </VStack>
 
             <Box
               display="flex"
@@ -66,9 +72,9 @@ export default function Home() {
               <Box
                 display="flex"
                 w="100%"
-                h={{ m: "80rem", d: "255rem" }}
+                h={{ m: "80rem", d: "217rem" }}
                 pos="absolute"
-                top={{ m: "none", d: "160rem" }}
+                top={{ m: "none", d: "100rem" }}
                 alignItems="center"
                 bgColor="#290603"
               ></Box>
@@ -78,11 +84,12 @@ export default function Home() {
                   <Image
                     pos="absolute"
                     alt="Image RoadMap"
-                    top="98rem"
+                    top="2rem"
                     zIndex="1"
                     src={roadMap.src}
                     w="485rem"
                     h="315rem"
+                    left="-7rem"
                     objectFit="cover"
                     objectPosition="5rem 80rem"
                   />
@@ -90,10 +97,11 @@ export default function Home() {
               )}
 
               <Text
-                w="290rem"
-                fontSize="25.1rem"
+                w="355rem"
+                fontSize="31.1rem"
                 fontFamily="cta"
                 fontWeight="bold"
+                top="140rem"
                 zIndex="4"
                 pos={{ m: "relative", d: "absolute" }}
                 left={{ m: "inherit", d: "325rem" }}
@@ -106,8 +114,8 @@ export default function Home() {
                   alt="Iveco Image"
                   position="absolute"
                   src={iveco.src}
-                  w="935rem"
-                  h="650rem"
+                  w="860rem"
+                  h="600rem"
                   left="520rem"
                   zIndex="1"
                 />
@@ -124,13 +132,13 @@ export default function Home() {
             display="flex"
             justifyContent="center"
             alignItems="center"
-            mt={{ m: "30rem !important", d: "inherit" }}
+            mt={{ m: "30rem !important", d: "unset" }}
           >
             NOSSOS SERVIÇOS
           </Box>
 
           <Box
-            mt={{ m: "30rem !important", d: "inherit" }}
+            mt={{ m: "30rem", d: "unset" }}
             w="100%"
             fontSize="18rem"
             bgColor="#091129"
@@ -149,7 +157,7 @@ export default function Home() {
               />
             )}
 
-            <Flex pl={{ m: "10rem", d: "inherit" }}>
+            <Flex pl={{ m: "10rem", d: "80rem" }}>
               <UnorderedList>
                 <ListItem fontSize="24.7rem" fontFamily="cta">
                   MUDANÇAS E EVENTOS PARA TODO BRASIL
@@ -179,8 +187,8 @@ export default function Home() {
               FAÇA SEU ORÇAMENTO
             </Box>
 
-            <Box display="flex" alignItems="baseline" gap='5rem'>
-              <Icon as={BsTelephoneOutbound} h='10rem' w='10rem'/>
+            <Box display="flex" alignItems="baseline" gap="5rem">
+              <Icon as={BsTelephoneOutbound} h="10rem" w="10rem" />
               <Text fontSize="15rem">19 0 0000-0000</Text>
             </Box>
 
