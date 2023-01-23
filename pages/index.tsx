@@ -26,7 +26,7 @@ export default function Home() {
   });
 
   return (
-    <Center w="100vw">
+    <Center w="100vw" color='white'>
       <VStack w={{ m: "100vw", d: "1440rem" }} h="100%">
         <VStack w={{ m: "100%", d: "100vw" }} zIndex="1">
           <Box bgColor="#244466" h="60rem" w="100vw"></Box>
