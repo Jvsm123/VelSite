@@ -18,6 +18,7 @@ import logo from "../assets/logoVeu.png";
 import roadMap from "../assets/road.png";
 import fiorino from "../assets/fiorino.png";
 import roadPinPoints from "../assets/roadBg.png";
+import Head from "next/head";
 
 export default function Home() {
   const isMobile = useBreakpointValue({
@@ -26,7 +27,28 @@ export default function Home() {
   });
 
   return (
-    <Center w="100vw" color='white'>
+    <Center w="100vw" color="white">
+      <Head>
+        <title>Vel Imoveis</title>
+        <meta name="O melhor lugar para transporte de imoveis em todo o Brasil!" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og:title" content="Vel Imoveis" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="../assets/favicon-32x32.png" />
+        <meta property="og:url" content="https://velimoveis.vercel.app/" />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="../assets/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="../assets/favicon-16x16.png"
+        />
+      </Head>
       <VStack w={{ m: "100vw", d: "1440rem" }} h="100%">
         <VStack w={{ m: "100%", d: "100vw" }} zIndex="1">
           <Box bgColor="#244466" h="60rem" w="100vw"></Box>
