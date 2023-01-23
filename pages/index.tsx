@@ -34,19 +34,13 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta property="og:title" content="Vel Imoveis" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="../assets/favicon-32x32.png" />
+        <meta property="og:image" content="../public/favicon-32x32.png" />
         <meta property="og:url" content="https://velimoveis.vercel.app/" />
         <link
           rel="icon"
           type="image/png"
           sizes="32x32"
-          href="../assets/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="../assets/favicon-16x16.png"
+          href="../public/favicon-32x32.png"
         />
       </Head>
       <VStack w={{ m: "100vw", d: "1440rem" }} h="100%">
