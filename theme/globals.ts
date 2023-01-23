@@ -3,6 +3,7 @@ export const colors = {
   nav: "#03103b",
   title: "cfd2d2",
   destaque: "#ffffff",
+  default: '#fff'
 };
 
 export const fonts = {
