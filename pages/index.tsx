@@ -16,6 +16,7 @@ import { BsTelephoneOutbound } from "react-icons/bs";
 import iveco from "../assets/iveco.png";
 import logo from "../assets/logoVeu.png";
 import roadMap from "../assets/road.png";
+import fiorino from "../assets/fiorino.png";
 
 export default function Home() {
   const isMobile = useBreakpointValue({
@@ -24,7 +25,7 @@ export default function Home() {
   });
 
   return (
-    <Center h="100vh">
+    <Center h="100vh" w='100vw' bgColor='#1A202E'>
       <VStack w={{ m: "100vw", d: "1440rem" }} h="100%">
         <VStack w="100%">
           <Box bgColor="#244466" h="60rem" w="100%"></Box>
@@ -43,14 +44,14 @@ export default function Home() {
             <VStack w="100%" alignItems="flex-start">
               <Box mt={{ m: "30rem !important", d: "inherit" }}>
                 <Text
-                  fontSize={{ m: "45rem", d: "61rem" }}
+                  fontSize={{ m: "45rem", d: "100rem" }}
                   fontFamily="titulo"
                   textAlign="center"
                 >
                   VEU MUDANÇAS
                 </Text>
                 <Text
-                  fontSize="16.9rem"
+                  fontSize={{ m: "16.9rem", d: "30rem" }}
                   bgColor="#244466"
                   p="4rem"
                   fontFamily="cta"
@@ -101,7 +102,7 @@ export default function Home() {
                 fontSize="31.1rem"
                 fontFamily="cta"
                 fontWeight="bold"
-                top="140rem"
+                top={{ m: "-5rem", d: "140rem" }}
                 zIndex="4"
                 pos={{ m: "relative", d: "absolute" }}
                 left={{ m: "inherit", d: "325rem" }}
@@ -114,10 +115,24 @@ export default function Home() {
                   alt="Iveco Image"
                   position="absolute"
                   src={iveco.src}
-                  w="860rem"
-                  h="600rem"
-                  left="520rem"
+                  w="820rem"
+                  h="555rem"
+                  left="475rem"
                   zIndex="1"
+                  top="-115rem"
+                />
+              )}
+
+              {!isMobile && (
+                <Image
+                  alt="Fiorino Image"
+                  position="absolute"
+                  src={fiorino.src}
+                  w="595rem"
+                  h="450rem"
+                  left="840rem"
+                  top="-30rem"
+                  zIndex="2"
                 />
               )}
             </Box>
@@ -152,7 +167,7 @@ export default function Home() {
                 alt="Iveco"
                 src={iveco.src}
                 transform="rotateY(186deg)"
-                w="300rem"
+                w="420rem"
                 h="300rem"
               />
             )}
