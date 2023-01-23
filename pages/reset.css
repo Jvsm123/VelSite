@@ -37,6 +37,7 @@ html {
 
 @font-face {
   font-family: "Telegraf";
-  src: url("../assets/fonts/PPTelegraf-Regular.otf") format("opentype");
-  font-weight: medium;
+  src: url("../assets/fonts/PPTelegraf-Regular.otf") format("opentype"),
+  url("../assets/fonts/PPTelegraf-UltraBold.otf") format("opentype"),
+  url("../assets/fonts/PPTelegraf-UltraLight.otf") format("opentype");
 }
